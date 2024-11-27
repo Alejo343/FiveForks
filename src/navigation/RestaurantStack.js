@@ -13,7 +13,7 @@ export const AppNavigation = () => (
       options={{ title: "Restaurantes" }}
     />
     <Stack.Screen
-      name={screen.restaurant.addResturant}
+      name={screen.restaurant.addRestaurant}
       component={AddRestaurant}
       options={{ title: "Agregar Restaurante" }}
     />

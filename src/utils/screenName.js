@@ -1,13 +1,15 @@
 const restaurantStack = {
   tab: "RestaurantTab",
   restaurants: "Restaurants",
-  addResturant: "addRestaurant",
+  addRestaurant: "addRestaurant",
 };
 
 const accountStack = {
   tab: "AccountTab",
   account: "Cuenta",
-  settings: "Ajustes",
+  login: "Login",
+  register: "Register",
+  settings: "settings",
 };
 
 const favoriteStack = {
