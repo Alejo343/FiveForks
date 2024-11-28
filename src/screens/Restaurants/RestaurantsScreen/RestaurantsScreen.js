@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { View, Text } from "react-native";
-import { Icon } from "react-native-elements";
+import { Icon } from "@rneui/themed";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
-import { LoadingModal } from "../../../components/Shared";
+
+import { LoadingModal } from "../../../components/shared";
 import { ListRestaurants } from "../../../components/Restaurants";
 import { screen, db } from "../../../utils";
 import { styles } from "./RestaurantsScreen.styles";
