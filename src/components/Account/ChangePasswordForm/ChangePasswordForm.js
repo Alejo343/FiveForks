@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View } from "react-native";
-import { Input, Button } from "react-native-elements";
+import { Input, Button } from "@rneui/themed";
 import { useFormik } from "formik";
 import {
   getAuth,

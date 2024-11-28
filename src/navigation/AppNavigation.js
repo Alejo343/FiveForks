@@ -6,7 +6,7 @@ import RankingStack from "./RankingStack";
 import SearchStack from "./SearchStack";
 import AccountStack from "./AccountStack";
 
-import { Icon } from "react-native-elements";
+import { Icon } from "@rneui/themed";
 
 import { screen } from "../utils";
 const Tab = createBottomTabNavigator();

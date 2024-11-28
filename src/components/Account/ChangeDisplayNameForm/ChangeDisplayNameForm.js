@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import { Input, Button } from "react-native-elements";
+import { Input, Button } from "@rneui/themed";
 import { useFormik } from "formik";
 import { getAuth, updateProfile } from "firebase/auth";
 import Toast from "react-native-toast-message";
@@ -9,15 +9,16 @@ import { styles } from "./ChangeDisplayNameForm.styles";
 
 export function ChangeDisplayNameForm(props) {
   const { onClose, onReload } = props;
+  const currentUser = getAuth().currentUser;
 
   const formik = useFormik({
-    initialValues: initialValues(),
+    initialValues: { displayName: currentUser?.displayName || "" },
     validationSchema: validationSchema(),
     validateOnChange: false,
+
     onSubmit: async (formValue) => {
       try {
         const { displayName } = formValue;
-        const currentUser = getAuth().currentUser;
         await updateProfile(currentUser, { displayName });
 
         onReload();
@@ -36,6 +37,7 @@ export function ChangeDisplayNameForm(props) {
     <View style={styles.content}>
       <Input
         placeholder="Nombre y apellidos"
+        value={formik.values.displayName}
         rightIcon={{
           type: "material-community",
           name: "account-circle-outline",

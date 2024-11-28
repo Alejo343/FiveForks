@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { View } from "react-native";
-import { ListItem, Icon, Text } from "react-native-elements";
+import { ListItem, Icon, Text } from "@rneui/themed";
 import { map } from "lodash";
+
 import { Modal } from "../../components";
 import { ChangeDisplayNameForm } from "./ChangeDisplayNameForm";
 import { ChangeEmailForm } from "./ChangeEmailForm";

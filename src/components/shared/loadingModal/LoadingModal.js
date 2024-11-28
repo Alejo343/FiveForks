@@ -1,10 +1,9 @@
 import React from "react";
 import { View, ActivityIndicator } from "react-native";
-import { Overlay, Text } from "react-native-elements";
+import { Overlay, Text } from "@rneui/themed";
 import { styles } from "./LoadingModal.styles";
 
 export function LoadingModal({ show, text }) {
-  if (!show) return null;
   return (
     <Overlay visible={show} overlayStyle={styles.overlay}>
       <View style={styles.view}>
